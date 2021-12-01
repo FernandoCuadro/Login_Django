@@ -1,0 +1,18 @@
+{% load static %}
+<nav>
+    <div class="nav-wrapper">
+      
+      <a href="/" class="brand-logo">.:Redes y Software - Ingenieria de Software:.</a>
+      
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+        {% if user.is_authenticated %}
+        <li><a href="">{{user.username}}</a></li>
+        <li><a href="/logout">Salir</a></li>
+        {% else %}
+        <li><a href="/registro">Registrarse</a></li>
+        <li><a href="/login">Loguearse</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
